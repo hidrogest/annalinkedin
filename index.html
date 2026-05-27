@@ -56,10 +56,12 @@
       // FOTOS DE PERFIL (Avatar)
       const imgBefore = "https://drive.google.com/thumbnail?id=1PXOebax4hkwDSVls3bGbOI3Sm4epWtHz&sz=w800";
       const imgAfter = "https://drive.google.com/thumbnail?id=14qLbFnkRXtBJRP_TMuBupEecPiJUO-ah&sz=w800";
+      const imgAfterDownload = "https://drive.google.com/uc?export=download&id=14qLbFnkRXtBJRP_TMuBupEecPiJUO-ah";
       
       // IMAGENS DE CAPA (Banner) - Atualizadas com as novas URLs
       const bgBefore = "https://drive.google.com/thumbnail?id=1dKA-mZ1ITB9ZTvnkd8wqlCN3q0HdJP4h&sz=w1200";
       const bgAfter = "https://drive.google.com/thumbnail?id=1xnMlZiZkHmJnTaUAXKYkBrhrcOOWNtAc&sz=w1200";
+      const bgAfterDownload = "https://drive.google.com/uc?export=download&id=1xnMlZiZkHmJnTaUAXKYkBrhrcOOWNtAc";
 
       // LOGO DA EMPRESA
       const logoHidrogest = "https://drive.google.com/thumbnail?id=1aWt-ZBZIvBdviJ3hoYVExMUoQlFEt15O&sz=w200";
@@ -246,10 +248,10 @@
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${isOptimized ? 'opacity-100' : 'opacity-0'}`}
                     />
 
-                    {/* Botão de Download */}
+                    {/* Botão de Download (agora usa o link direto para download original) */}
                     <div className={`absolute top-4 right-4 transition-all duration-500 z-10 ${isOptimized ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
                       <a 
-                        href={bgAfter} 
+                        href={bgAfterDownload} 
                         download="Capa_Hidrogest.jpg"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -283,10 +285,10 @@
                         />
                         <div className="absolute inset-0 ring-1 ring-black/10 rounded-full pointer-events-none"></div>
                         
-                        {/* Botão de Download da Foto de Perfil */}
+                        {/* Botão de Download da Foto de Perfil (agora com link original) */}
                         <div className={`absolute bottom-1 right-1 transition-all duration-500 z-30 ${isOptimized ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'}`}>
                           <a 
-                            href={imgAfter} 
+                            href={imgAfterDownload} 
                             download="Foto_Perfil_Hidrogest.jpg"
                             target="_blank"
                             rel="noopener noreferrer"
